@@ -1,10 +1,10 @@
 body {
     margin: 0;
+    font-family: 'Roboto Condensed', 'Helvetica Neue', 'Helvetica', 'Arial', 'sans-serif';
 }
 
 main {
  width: 90%;
- background: blue; 
 }
 
 footer {
@@ -17,27 +17,28 @@ footer {
     display: flex;
 }
 
-.flex_item {
 
-}
-
-.header_image {
-    width: 100vw;
-}
-
-#site-header {
-    margin: auto;
-    max-height: 100vh;
-    overflow: hidden;
-}
-
-/*Navigation Bar*/
-#nav-bar {
-    display: block;
-    background: linear-gradient(to bottom, rgb(55, 56, 64), rgba(55, 56, 64, 0));
-    position: fixed;
+#site-header-image img {
     width: 100%;
-    padding-top: 32px;
+    height: auto;
+
+}
+
+/*Navigation Bar
+================*/
+
+.header-container {
+    background: #373840;
+    width: 100%;
+    height: 100%;
+}
+
+#nav-bar {
+    background: linear-gradient(to bottom, rgb(55, 56, 64), rgba(55, 56, 64, 0));
+    position: sticky;
+    width: 100%;
+    height: auto;
+    padding-top: 0.5rem;
     top: 0;
     left:0;
     z-index: 100; 
@@ -46,45 +47,81 @@ footer {
 #nav-bar ul {
     display: flex;
     list-style-type:none;
-	  align-items: top;  
-	  margin: 5px;
+    align-items: center;  
+    margin: 5px;
+    padding: 0;
 }
 
-.header-item { 
-    min-width: 100px;
-    padding: 2rem 1rem;
+#header-logo {
+    display: inline;
+}
+#header-logo a img {
+    max-height: 60px;
+    width: auto;
+}
+
+#nav-bar li { 
+    padding: 0.5rem 0.5rem;
 }
 
 .push-right {
   margin-left: auto;
 } 
 
-.nav-link {
+#nav-bar a {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: 1.5rem;
-    color: white;
+    color: #eae8eb;
     text-decoration: none;
     font-variant-caps: small-caps;
-    margin: 2rem;
+    margin: 1rem;
  }
-
-
-
 
 @media (max-width: 600px) {
 	
-	#nav-bar ul {
-    flex-direction: column; 		
-  }
-	li {
-		padding: 0.3rem;	}
-	
+	#nav-bar ul { flex-direction: column; }
+	#nav-bar li { padding: 0.3rem;	}
+	.nav-link{
+        font-size: 1rem;
+    }
 	.push-right { margin: auto;}
 	
 	#header-img {height: 0px;}
 	
-	.header-logo {
+	#header-logo {
 	 visibility: collapse;
 		position: fixed;
-	}
+    }
+    
+
+}
+
+/*======================
+    Route Article styling
+======================*/
+
+.route_container {
+    padding: 0.8 rem;
+    background-color: #3D4D65;
+    margin: 1rem;
+}
+
+.route_container a{
+    color: inherit;
+    text-decoration: none;
+    font-variant-caps: small-caps;
+
+}
+
+.route-header {
+    background-color: #374355;
+    color: #eae8eb;
+    text-decoration-style: unset;
+    text-emphasis: none;
+    margin: unset;
+    padding: 0.5rem;
+}
+
+.route-title{
+    margin: unset;
 }
