@@ -10,27 +10,28 @@
 
 <header>
 
-<div class="header-container">
-    <?php if ( get_header_image() && is_front_page() ) : ?>
-        <div id="site-header-image" >
-            <img alt="" src="<?php header_image(); ?>" >
-        </div>
-    <?php endif; ?>
-    <div>
-    <nav id="nav-bar">
-        <div id="header-logo">
-            <?php
-                if ( function_exists( 'the_custom_logo' ) ) {
-                    the_custom_logo();
-                }
-            ?>
-        </div>
-    
-        <?php wp_nav_menu( array('theme_location' => 'primary') ); ?>
-    </nav>
+    <div class="header-container">
+        <?php if ( get_header_image() && is_front_page() ) : ?>
+            <div id="site-header-image" >
+                <img alt="" src="<?php header_image(); ?>" >
             </div>
-</div>
-
+        <?php endif; ?>
+    <div>
 </header>
+
+<nav id="nav-bar">
+    <div id="header-logo">
+        <?php
+            if ( function_exists( 'the_custom_logo' ) ) {
+                the_custom_logo();
+            }
+        ?>
+    </div>
+    <div id="header-menu" class="push-right">
+        <?php wp_nav_menu( array('theme_location' => 'primary') ); ?>
+    </div>    
+</nav>
+
+
 
 <body <?php body_class(  ); ?> >

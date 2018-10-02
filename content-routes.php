@@ -6,7 +6,7 @@
 		<small>Grade: <?php the_terms( $post->ID, 'grade', '', ', ', '' ); ?> | Height: <?php the_terms( $post->ID, 'distance', '', ', ', '' ); ?>m</small>
 	</header>
 	
-	<div class="row">
+	<div class="route_content">
 		
 		<?php if( has_post_thumbnail() ): ?>
 		
@@ -19,9 +19,8 @@
 		
 		<?php else: ?>
 		
-			<div class="col-xs-12">
-				<?php the_content(); ?>
-			</div>
+			<?php the_content() ?>
+			
 		
 		<?php endif; ?>
 	</div>
